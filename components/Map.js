@@ -29,8 +29,9 @@ const Map = ({ searchResults }) => {
         <ReactMapGL
             {...viewport}
             mapboxAccessToken={process.env.mapbox_key}
-            mapStyle="mapbox://styles/rezaan6/cleocv1ke001f01o8wmpfk5s5"
+            mapStyle="mapbox://styles/rezaan6/clepova51001g01mq7h7s3kqi"
             onMove={(nextViewport) => setViewport(nextViewport.viewState)}
+            
         >
             {searchResults.map((result) => (
                 <div key={result.long}>
