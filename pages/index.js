@@ -27,12 +27,7 @@ export default function Home({ exploreData, cardsData }) {
           {/* Pull data from a server */}
           <div className="grid grid-col-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {exploreData?.map(({ img, location, distance }) => (
-              <SmallCard
-                key={img}
-                img={img}
-                location={location}
-                distance={distance}
-              />
+              <SmallCard key={img} img={img} location={location} distance={distance} />
             ))}
           </div>
         </section>
@@ -60,12 +55,8 @@ export default function Home({ exploreData, cardsData }) {
 }
 
 export async function getStaticProps() {
-  const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G").then(
-    (res) => res.json()
-  );
-  const cardsData = await fetch("https://www.jsonkeeper.com/b/VHHT").then(
-    (res) => res.json()
-  );
+  const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G").then((res) => res.json());
+  const cardsData = await fetch("https://www.jsonkeeper.com/b/VHHT").then((res) => res.json());
   return {
     props: {
       exploreData,

@@ -3,25 +3,11 @@ import { StarIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import React from "react";
 
-const InfoCard = ({
-  img,
-  location,
-  title,
-  description,
-  star,
-  price,
-  total,
-}) => {
+const InfoCard = ({ img, location, title, description, star, price, total }) => {
   return (
     <div className="flex py-7 px-2 pr-4 border-b cursor-pointer hover:opacity-80 hover:shadow-lg transition duration-200 ease-out first:border-t ">
       <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
-        <Image
-          src={img}
-          alt={title}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-2xl"
-        />
+        <Image src={img} alt={title} layout="fill" objectFit="cover" className="rounded-2xl" />
       </div>
 
       <div className="flex flex-col flex-grow pl-5">

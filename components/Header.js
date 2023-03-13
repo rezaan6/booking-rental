@@ -54,13 +54,7 @@ const Header = ({ placeholder }) => {
         onClick={() => router.push("/")}
         className="relative flex items-center h-10 my-auto cursor-pointer"
       >
-        <Image
-          src="/logo.png"
-          alt="logo"
-          layout="fill"
-          objectFit="contain"
-          objectPosition="left"
-        />
+        <Image src="/logo.png" alt="logo" layout="fill" objectFit="contain" objectPosition="left" />
       </div>
 
       {/* Middle - Search */}
@@ -94,9 +88,7 @@ const Header = ({ placeholder }) => {
             onChange={handleSelect}
           />
           <div className="flex items-center border-b mb-4">
-            <h2 className="text-2xl flex-grow font-semibold">
-              Number of Guests
-            </h2>
+            <h2 className="text-2xl flex-grow font-semibold">Number of Guests</h2>
             <UsersIcon className="h-5" />
             <input
               value={noOfGuests}
@@ -108,11 +100,7 @@ const Header = ({ placeholder }) => {
           </div>
 
           <div className="flex">
-            <button
-              onClick={resetInput}
-              className="flex-grow text-gray-500"
-              type=""
-            >
+            <button onClick={resetInput} className="flex-grow text-gray-500" type="">
               Cancel
             </button>
             <button onClick={search} className="flex-grow text-red-400" type="">
